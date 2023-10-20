@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ArtikelController;
 use App\Http\Controllers\game_controller;
+use App\Http\Controllers\ProdukGameController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -22,3 +23,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('game', [game_controller::class, 'index'])->name('user.index');
 Route::resource('artikel', ArtikelController::class);
+Route::resource('produk_game', ProdukGameController::class);
